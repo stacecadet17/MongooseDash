@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>Edit <%= wolves.name %>!</h1>
+    <form action='/wolves/<%= wolves.id %>' method='post'>
+      Name:<input type='text' name='name' value='<%= wolves.name %>'>
+      Color:<input type='text' name='color' value='<%= wolves.color %>'>
+      Age:<input type='text' name='age' value='<%= wolves.age %>'>
+      <input type='submit' value='Edit!'>
+  </body>
+</html>

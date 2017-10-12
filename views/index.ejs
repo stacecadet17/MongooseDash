@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>The Wolfpack</h1>
+    <a href='/wolves/new'>Join a New Wolf</a>
+    <% for(var x in wolves) { %>
+        <h3>Name: <a href='/wolves/<%= wolves[x]._id %>'><%= wolves[x].name %></a></h3>
+        <p>Color: <%= wolves[x].color %></p>
+        <p>Age: <%= wolves[x].age %></p>
+        <a href ='/wolves/<%= wolves[x]._id %>/edit'>Edit</a>
+        <form action='/wolves/<%= wolves[x]._id%>/destroy' method='post'>
+          <input type='submit' value='Delete'>
+        </form>
+    <% } %>
+
+  </body>
+</html>
